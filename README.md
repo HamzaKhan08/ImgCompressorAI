@@ -138,8 +138,8 @@ passport-photo-maker/
 
 ### 1. Clone Repository
 
-git clone https://github.com/yourusername/passport-photo-maker.git
-cd passport-photo-maker
+git clone https://github.com/hamzakhan08/ImgCompressorAI.git
+cd ImgCompressorAI
 
 cd server
 npm install
