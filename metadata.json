@@ -1,0 +1,5 @@
+{
+  "name": "PassportPro AI",
+  "description": "A privacy-first, commercial-grade passport photo generator. Process photos locally in your browser with AI compliance checks. Features smart cropping, country presets (US, UK, India, Schengen, etc.), and printable sheet generation.",
+  "requestFramePermissions": []
+}
