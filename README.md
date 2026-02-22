@@ -1,6 +1,6 @@
 # 🪪 Passport Photo Maker (AI-Powered ID Photo Generator)
 
-A production-ready, privacy-first Passport Size Photo Maker web application that allows users to upload their photo and automatically generate passport-compliant ID photos for multiple countries and document types with AI-assisted face alignment, background removal, and print-ready export.
+AI-powered Passport & ID Photo Maker web app that automatically generates passport-compliant photos with face alignment, background removal, and print-ready export. Built with a privacy-first architecture where uploaded images are processed per session and automatically deleted after use.
 
 ---
 
@@ -13,12 +13,12 @@ A production-ready, privacy-first Passport Size Photo Maker web application that
 - ✂️ Smart crop with eye-line & margin guides  
 - 🔆 Auto brightness & contrast correction  
 - 🧴 Optional skin smoothing  
-- 🌍 Multiple country presets (India, US, UK, Schengen, Canada, Aadhaar, DL)  
+- 🌍 Multiple country presets (India, US, UK, Schengen, Canada, Aadhaar, Driving License)  
 - 📄 Printable sheets (1 / 4 / 8 / 16 copies, A4 layout)  
 - 🖼 PNG & JPG export at 300 DPI  
 - ↩️ Undo / Redo edits  
 - 📱 Fully responsive editor (mobile + desktop)  
-- 🌙 Dark mode toggle  
+- 🌙 Dark mode support  
 - ⚠️ Face detection & compliance warnings  
 - 🔒 Privacy-first auto image deletion  
 
@@ -26,17 +26,17 @@ A production-ready, privacy-first Passport Size Photo Maker web application that
 
 ## 🔐 Privacy & Security
 
-This application is designed with **zero persistent image storage**.
+This application stores **no images permanently**.
 
-Images are automatically deleted:
+Uploaded photos are automatically deleted:
 
-- When user closes tab  
+- When the user closes the tab  
 - When session ends  
 - After download  
 - After 10 minutes inactivity  
-- On scheduled server cleanup  
+- During scheduled server cleanup  
 
-Implementation:
+Privacy implementation:
 
 - Session-scoped temp folders  
 - WebSocket disconnect cleanup  
@@ -66,7 +66,7 @@ Implementation:
 - Docker  
 - docker-compose  
 - Nginx ready  
-- Vercel / Render / AWS deployable  
+- Deployable to Vercel / Render / AWS  
 
 ---
 
@@ -86,9 +86,81 @@ Each preset defines:
 - Width / Height (mm)  
 - DPI  
 - Head ratio  
-- Eye line position  
+- Eye-line position  
 - Background color  
 
 ---
 
 ## 🖼 Editor Workflow
+
+Upload → Adjust → Background → Size → Download
+
+Editor capabilities:
+
+- Drag / Zoom / Rotate / Scale  
+- Face alignment guides  
+- Eye-line guides  
+- Safe margin overlay  
+- Live preview  
+- Undo / Redo  
+
+---
+
+## 📁 Project Structure
+passport-photo-maker/
+│
+├── client/
+│ └── src/
+│ ├── components/
+│ ├── pages/
+│ ├── hooks/
+│ ├── utils/
+│ └── assets/
+│
+├── server/
+│ ├── routes/
+│ ├── controllers/
+│ ├── services/
+│ ├── temp/
+│ └── utils/
+│
+├── docker/
+│ ├── Dockerfile.client
+│ ├── Dockerfile.server
+│ └── docker-compose.yml
+│
+└── README.md
+
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/yourusername/passport-photo-maker.git
+cd passport-photo-maker
+
+cd server
+npm install
+npm run dev
+
+
+cd client
+npm install
+npm run dev
+
+http://localhost:5173
+
+📜 License
+
+MIT License © 2026
+
+
+Hamza Khan
+Full-Stack Developer • AI & SaaS Builder
+
+GitHub: https://github.com/hamzakhan08
+
+Portfolio: https://hamzaayazkhan.netlify.app
