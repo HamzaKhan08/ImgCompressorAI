@@ -138,7 +138,6 @@ passport-photo-maker/
 
 ### 1. Clone Repository
 
-```bash
 git clone https://github.com/yourusername/passport-photo-maker.git
 cd passport-photo-maker
 
